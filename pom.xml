@@ -3,4 +3,12 @@
   <groupId>pxb.android.axml</groupId>
   <artifactId>axml</artifactId>
   <version>0.0.1</version>
+  <packaging>jar</packaging>
+  
+  <build>
+    <finalName>axml</finalName>
+    <sourceDirectory>src</sourceDirectory>
+    <testSourceDirectory>test</testSourceDirectory>
+  </build>
+
 </project>
