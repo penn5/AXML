@@ -3,12 +3,31 @@
   <groupId>pxb.android.axml</groupId>
   <artifactId>axml</artifactId>
   <version>0.0.1</version>
-  <packaging>jar</packaging>
-  
+
   <build>
     <finalName>axml</finalName>
     <sourceDirectory>src</sourceDirectory>
-    <testSourceDirectory>test</testSourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.0.2</version>
+        <configuration>
+          <!-- DO NOT include test files in your Jar -->
+          <excludes>
+            <exclude>**/test*</exclude>
+          </excludes>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.10</version>
+    </dependency>
+  </dependencies>
 
 </project>
